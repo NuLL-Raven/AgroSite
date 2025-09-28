@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-06 16:23+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+#: .\agrosite\settings.py:113
+msgid "French"
+msgstr "فرنسية"
+
+#: .\agrosite\settings.py:114
+msgid "Arabic"
+msgstr "عربية"
+
+#: .\products\templates\products\base.html:92
+msgid "Accueil"
+msgstr "الرئيسية"
+
+#: .\products\templates\products\base.html:95
+msgid "Produits"
+msgstr "المنتجات"
+
+#: .\products\templates\products\base.html:106
+msgid "Français"
+msgstr "فرنسية"
+
+#: .\products\templates\products\base.html:110
+msgid "العربية"
+msgstr "Francais"
+
+#: .\products\templates\products\home.html:5
+msgid "Acceuil"
+msgstr "الرئيسية"
+
+#: .\products\templates\products\home.html:72
+msgid "Tout ce qui concerne l'agriculture"
+msgstr "كل ما يتعلق بالزراعة"
+
+#: .\products\templates\products\home.html:73
+msgid "Trouvez les meilleurs produits agricoles à des prix abordables."
+msgstr "ابحث عن أفضل المنتجات الزراعية بأسعار معقولة."
+
+#: .\products\templates\products\home.html:76
+msgid "Parcourir les produits"
+msgstr "تصفح المنتجات"
+
+#: .\products\templates\products\home.html:77
+msgid "Contactez-nous"
+msgstr "اتصل بنا"
+
+#: .\products\templates\products\home.html:86
+#: .\products\templates\products\home.html:115
+#: .\products\templates\products\product_detail.html:42
+#: .\products\templates\products\product_list.html:92
+msgid "Les meilleurs outils d’un vendeur de confiance"
+msgstr "أفضل الأدوات من بائع موثوق"
+
+#: .\products\templates\products\home.html:89
+msgid ""
+"Nous vendons des équipements pour les petites et moyennes entreprises "
+"spécialisées dans l’agriculture. Nous proposons une large gamme d’outils et "
+"de matériel pour la culture, l’irrigation et la récolte. Nous savons ce dont "
+"vous avez besoin, car nous sommes dans ce domaine depuis cinq générations."
+msgstr "نحن نبيع معدات للشركات الصغيرة والمتوسطة المتخصصة في الزراعة. نقدم مجموعة واسعة من الأدوات والمعدات للزراعة والري والحصاد. نحن نعرف ما تحتاجه لأننا في هذا المجال منذ خمسة أجيال."
+
+#: .\products\templates\products\home.html:90
+msgid "Nous sommes SlimAgri, et nous sommes fiers de nos produits."
+msgstr "نحن SlimAgri، ونحن فخورون بمنتجاتنا."
+
+#: .\products\templates\products\home.html:98
+msgid "Venez nous rendre visite"
+msgstr "تعال لزيارتنا"
+
+#: .\products\templates\products\home.html:99
+msgid "El Khroub, Constantine"
+msgstr "الخروب، قسنطينة"
+
+#: .\products\templates\products\home.html:100
+msgid "Tous les jours de 10h00 à 19h00"
+msgstr "يومياً من الساعة 10:00 إلى 19:00"
+
+#: .\products\templates\products\home.html:106
+msgid "Contactez-nous sur WhatsApp"
+msgstr "اتصل بنا عبر واتساب"
+
+#: .\products\templates\products\home.html:116
+#: .\products\templates\products\product_detail.html:43
+#: .\products\templates\products\product_list.html:93
+msgid "Tous droits réservés."
+msgstr "جميع الحقوق محفوظة."
+
+#: .\products\templates\products\product_detail.html:5
+msgid "AgroSite"
+msgstr "AgroSite"
+
+#: .\products\templates\products\product_detail.html:22
+msgid "Prix"
+msgstr "سعر"
+
+#: .\products\templates\products\product_detail.html:28
+msgid "Contacter sur WhatsApp"
+msgstr "اتصل بنا عبر واتساب"
+
+#: .\products\templates\products\product_detail.html:33
+msgid "Retour aux Produits"
+msgstr "العودة إلى المنتجات"
+
+#: .\products\templates\products\product_list.html:6
+msgid "Nos Produits"
+msgstr "منتجاتنا"
+
+#: .\products\templates\products\product_list.html:17
+msgid "Voir Détails"
+msgstr "عرض التفاصيل"
+

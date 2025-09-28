@@ -1,0 +1,121 @@
+{% extends 'products/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Acceuil" %} | AgroSite{% endblock %}
+
+{% block content %}
+
+<!-- Custom CSS for Carousel and Hero Section -->
+<style>
+    /* Hero Section with Background Image */
+    .hero-section {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        background: url('/static/images/1245.png') no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #FFAD00;
+        padding: 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 4rem;
+        font-weight: bold;
+    }
+
+    .hero-section p {
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding-bottom: 35px;
+    }
+
+    .hero-section .btn {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+    }
+
+    /* Smaller Carousel */
+    #productCarousel {
+        max-width: 600px;
+        max-height: 350px;
+        margin: auto;
+    }
+
+    /* Make product images smaller */
+    .carousel-inner .product-image {
+        max-width: 100%;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    /* Increase Arrow Size */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Change Arrow Color */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(38%) sepia(96%) saturate(460%) hue-rotate(100deg) brightness(90%) contrast(90%);
+    }
+</style>
+
+<!-- Hero Section with Background Image -->
+<div class="hero-section">
+    <div class="hero-content text-center">
+        <h1>{% trans "Tout ce qui concerne l'agriculture" %}</h1>
+        <p class="lead">{% trans "Trouvez les meilleurs produits agricoles à des prix abordables." %}</p>
+        <div class="d-flex justify-content-center gap-3">
+            <a href="{% url 'product_list' %}" class="btn btn-white btn-lg"
+               style="color: black; background-color: white;">{% trans "Parcourir les produits" %}</a>
+            <a href="#contact-section" class="btn btn-success btn-lg">{% trans "Contactez-nous" %}</a>
+        </div>
+    </div>
+</div>
+
+<!-- Trusted Seller Section -->
+<section class="trusted-seller-section text-center py-5" style="background-color: #24943D; color: white;">
+    <div class="container">
+        <h2 class="section-title" style="color: #FFC900; font-size: 2.5rem;">
+            {% trans "Les meilleurs outils d’un vendeur de confiance" %}
+        </h2>
+        <p class="section-description">
+            {% trans "Nous vendons des équipements pour les petites et moyennes entreprises spécialisées dans l’agriculture. Nous proposons une large gamme d’outils et de matériel pour la culture, l’irrigation et la récolte. Nous savons ce dont vous avez besoin, car nous sommes dans ce domaine depuis cinq générations." %}
+            <strong>{% trans "Nous sommes SlimAgri, et nous sommes fiers de nos produits." %}</strong>
+        </p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact-section" class="contact-section text-center py-5" style="background-color: #FCF9F8;">
+    <div class="container">
+        <h2 class="contact-title">{% trans "Venez nous rendre visite" %}</h2>
+        <p class="contact-info"><i class="fas fa-map-marker-alt"></i> {% trans "El Khroub, Constantine" %}</p>
+        <p class="contact-info"><i class="fas fa-clock"></i> {% trans "Tous les jours de 10h00 à 19h00" %}</p>
+        <p class="contact-info"><i class="fas fa-phone"></i> 0770298255</p>
+        <p class="contact-info"><i class="fas fa-envelope"></i> slimagri07@gmail.com</p>
+
+        <div class="mt-4">
+            <a href="https://wa.me/213550427036" class="btn btn-success btn-lg">
+                <i class="fab fa-whatsapp"></i> {% trans "Contactez-nous sur WhatsApp" %}
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<section class="footer-section text-center py-4" style="background-color: #24943D;">
+    <div class="container">
+        <p class="footer-text" style="color: white;">{% trans "Les meilleurs outils d’un vendeur de confiance" %} |
+            <strong>SLIM AGRI</strong></p>
+        <p class="footer-copy" style="color: white;">&copy; 2025 SLIM AGRI. {% trans "Tous droits réservés." %}</p>
+    </div>
+</section>
+
+{% endblock %}

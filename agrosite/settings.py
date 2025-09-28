@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-a4pl9x_640)f)p44&h%edo=+j!aqwslo1&1)y6s)x3c+q*l*$j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 import sys
 print(">>> STARTUP using settings file:", __file__, file=sys.stderr)
@@ -35,6 +35,11 @@ print(">>> STARTUP ALLOWED_HOSTS:", ALLOWED_HOSTS, file=sys.stderr)
 
 
 
+# settings.py
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://lashell-unleavenable-brycen.ngrok-free.dev",
+]
 
 
 # Application definition

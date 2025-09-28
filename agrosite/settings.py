@@ -29,7 +29,7 @@ DEBUG = False
 import sys
 print(">>> STARTUP using settings file:", __file__, file=sys.stderr)
 
-ALLOWED_HOSTS = ["*", "agrosite-1.onrender.com", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["*", "agrosite-1.onrender.com", "localhost", "127.0.0.1", '.vercel.app']
 
 print(">>> STARTUP ALLOWED_HOSTS:", ALLOWED_HOSTS, file=sys.stderr)
 
@@ -179,7 +179,8 @@ ALLOWED_HOSTS = [
     "agrosite-1.onrender.com",  # your Render app
     "127.0.0.1",
     "localhost",
-    "*",                        # optional, but keeps things flexible
+    "*",    # optional, but keeps things flexible
+    '.vercel.app',
 ]
 
 print(">>> USING SETTINGS FILE:", __file__, file=sys.stderr)

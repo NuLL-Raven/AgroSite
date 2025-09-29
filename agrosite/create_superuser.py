@@ -1,19 +1,18 @@
-import os
-import django
-
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "agrosite.settings")
-django.setup()
-
 from django.contrib.auth import get_user_model
+from django.db.utils import OperationalError
 
-User = get_user_model()
-
-username = "AdeloTh"
-email = "adeloth0569@gmail.com"
-password = "Hiroo210500"   # 👉 change to a strong password
-
-if not User.objects.filter(username=username).exists():
-    User.objects.create_superuser(username=username, email=email, password=password)
-    print(">>> Superuser created")
-else:
-    print(">>> Superuser already exists")
+def create_superuser():
+    User = get_user_model()
+    try:
+        if not User.objects.filter(username="admin").exists():
+            User.objects.create_superuser(
+                username="AdeloTh",
+                email="adeloth0569@gmail.com",
+                password="Hiroo210500"
+            )
+            print("Superuser 'admin' created ✅")
+        else:
+            print("Superuser already exists")
+    except OperationalError:
+        # Database might not be ready during migration
+        print("Database not ready, skipping superuser creation")

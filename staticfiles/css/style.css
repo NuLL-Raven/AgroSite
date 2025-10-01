@@ -1,0 +1,153 @@
+/* Hero Section Styles */
+.hero-content {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.hero-content .btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+}
+
+/* Product Card Styling */
+.product-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 40px 0;
+    background: #f8f9fa;
+}
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.contact-section form {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Product Image Styling */
+.product-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    width: 350px; /* Adjust as needed */
+    height: 350px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Make sure text is centered */
+.text-center {
+    text-align: center;
+}
+
+.trusted-seller-section {
+    background: #f8f9fa;
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.contact-section {
+    background: #f8f9fa;
+    padding: 50px 0;
+}
+
+.contact-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    color: #28a745;
+    margin-right: 10px;
+}
+
+.btn-success {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+    background: #218838;
+}
+
+/* Footer Section */
+.footer-section {
+    background: #2c2c2c; /* Dark gray */
+    color: #bfbfbf; /* Light gray */
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    color: #bbb;
+}

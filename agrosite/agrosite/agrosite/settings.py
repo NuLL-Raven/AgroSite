@@ -79,10 +79,19 @@ WSGI_APPLICATION = 'agrosite.wsgi.application'
 
 # Database
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get("DATABASE_URL")
-    )
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "neondb",
+        "USER": "neondb_owner",
+        "PASSWORD": "npg_u51KWOPoFXCS",  # from your Neon connection string
+        "HOST": "ep-falling-grass-agz6jwy5-pooler.c-2.eu-central-1.aws.neon.tech",
+        "PORT": "5432",
+        "OPTIONS": {
+            "sslmode": "require",
+        },
+    }
 }
+
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [

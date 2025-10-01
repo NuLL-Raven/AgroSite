@@ -135,8 +135,6 @@ LOCALE_PATHS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-INSTALLED_APPS += ["cloudinary", "cloudinary_storage"]
-
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
 

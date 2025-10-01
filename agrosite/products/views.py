@@ -40,9 +40,7 @@ def create_admin_view(request):
     User = get_user_model()
 
     # Optional: prevent if already exists
-    if User.objects.filter(is_superuser=True).exists():
-        messages.error(request, "An admin already exists.")
-        return redirect("/admin/")
+
 
     if request.method == "POST":
         form = AdminCreationForm(request.POST)

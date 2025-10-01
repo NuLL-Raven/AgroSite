@@ -1,17 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Create Admin</title>
+    <meta charset="UTF-8">
+    <title>Créer un compte Admin</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    <h1>Create Superuser</h1>
+    <h2>Créer un compte administrateur</h2>
+
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li style="color: red;">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Create Admin</button>
+        <label>Clé secrète:</label>
+        <input type="password" name="key" required><br>
+
+        <label>Nom d'utilisateur:</label>
+        <input type="text" name="username" required><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label>Mot de passe:</label>
+        <input type="password" name="password" required><br>
+
+        <button type="submit">Créer</button>
     </form>
-    {% for message in messages %}
-        <p>{{ message }}</p>
-    {% endfor %}
 </body>
 </html>

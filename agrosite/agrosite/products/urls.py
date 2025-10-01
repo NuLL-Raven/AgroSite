@@ -4,7 +4,7 @@ from django.views.i18n import set_language
 from . import views
 from .views import switch_language
 
-from .views import create_admin_view
+from products.views_admin import create_admin_view
 
 urlpatterns = [
     path('', views.home, name='home'),

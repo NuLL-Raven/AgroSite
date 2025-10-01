@@ -5,14 +5,27 @@ services:
     plan: free
     buildCommand: |
       pip install -r requirements.txt && \
-      python manage.py collectstatic --noinput
+      python manage.py collectstatic --noinput && \
+      python manage.py migrate --noinput
     startCommand: gunicorn agrosite.wsgi:application
-    releaseCommand: >
-      python manage.py migrate --noinput && 
-      python manage.py shell -c 'from django.contrib.auth import get_user_model; User = get_user_model(); username="AdeloTh"; email="adeloth0569@gmail.com"; password="Hiroo210500"; 
-      import sys; 
-      if not User.objects.filter(username=username).exists(): User.objects.create_superuser(username, email, password); print(f"Superuser {username} created."); 
-      else: print(f"Superuser {username} already exists.");'
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://agrosite_user:FxK2sCdwcrJljQuCwPdeKX8AmCaboh9y@dpg-d3eqc1e3jp1c73eku1jg-a/agrosite
+
+jobs:
+  - name: create-superuser
+    type: cron
+    env: python
+    schedule: "*/5 * * * *" # runs every 5 minutes (you can run once then disable)
+    command: >
+      python manage.py shell -c 'from django.contrib.auth import get_user_model;
+      User = get_user_model();
+      username="AdeloTh"; email="adeloth0569@gmail.com"; password="Hiroo210500";
+      if not User.objects.filter(username=username).exists():
+          User.objects.create_superuser(username, email, password);
+          print(f"Superuser {username} created.");
+      else:
+          print(f"Superuser {username} already exists.");'
     envVars:
       - key: DATABASE_URL
         value: postgresql://agrosite_user:FxK2sCdwcrJljQuCwPdeKX8AmCaboh9y@dpg-d3eqc1e3jp1c73eku1jg-a/agrosite

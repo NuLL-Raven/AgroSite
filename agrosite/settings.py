@@ -35,6 +35,8 @@ CSRF_TRUSTED_ORIGINS = [
 
 # Application definition
 INSTALLED_APPS = [
+    'cloudinary',
+    'cloudinary_storage',
     'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'products',
+
 ]
 
 MIDDLEWARE = [

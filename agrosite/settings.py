@@ -136,6 +136,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+INSTALLED_APPS += ["cloudinary", "cloudinary_storage"]
+
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+
+
 JAZZMIN_SETTINGS = {
     "site_title": "Slim Agri Admin",
     "site_header": "Slim Agri",

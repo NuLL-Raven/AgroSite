@@ -15,6 +15,8 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'agrosite.settings')
 
 application = get_wsgi_application()
 
+app = application
+
 from django.contrib.auth import get_user_model
 
 def create_superuser():

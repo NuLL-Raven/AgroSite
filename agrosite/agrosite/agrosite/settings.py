@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
+    'agrosite-1.onrender.com',
 ]
 
 ADMIN_CREATION_KEY = os.getenv("ADMIN_CREATION_KEY", "AdeloTh2105")

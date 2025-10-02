@@ -5,30 +5,85 @@
 {% block title %}404 | AgroSite{% endblock %}
 
 {% block content %}
-<div class="hero-section" style="background: url('/static/images/1245.png') no-repeat center center/cover;">
-    <div class="hero-content text-center">
+<div class="error-page">
 
-        <!-- CSS Illustration -->
-        <div class="css-404-illustration" style="margin-bottom: 30px;">
-            <div class="paper" style="width: 150px; height: 150px; background: #FFAD00; margin: 0 auto; position: relative; border-radius: 10px; animation: float 2s infinite alternate;">
-                <div style="position: absolute; top: 30%; left: 25%; width: 20px; height: 20px; background: white; border-radius: 50%;"></div>
-                <div style="position: absolute; top: 30%; right: 25%; width: 20px; height: 20px; background: white; border-radius: 50%;"></div>
-                <div style="position: absolute; bottom: 25%; left: 50%; transform: translateX(-50%); width: 60px; height: 10px; background: white; border-radius: 5px;"></div>
-            </div>
+    <!-- CSS Illustration -->
+    <div class="css-404-illustration">
+        <div class="paper">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="mouth"></div>
         </div>
-
-        <h1 style="color: #FFAD00;">{% trans "404 - Page introuvable" %}</h1>
-        <p class="lead" style="color: white; font-weight: bold;">
-            {% trans "Désolé, la page que vous cherchez n’existe pas." %}
-        </p>
-        <a href="{% url 'home' %}" class="btn btn-success btn-lg mt-4">{% trans "Retour à l'accueil" %}</a>
     </div>
+
+    <h1>404 - {% trans "Page introuvable" %}</h1>
+    <p class="lead">{% trans "Désolé, la page que vous cherchez n’existe pas." %}</p>
+    <a href="{% url 'home' %}" class="btn btn-success btn-lg mt-4">{% trans "Retour à l'accueil" %}</a>
 </div>
 
 <style>
+/* Full-page gradient background */
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #24943D, #FFAD00);
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* CSS Illustration */
+.paper {
+    width: 180px;
+    height: 180px;
+    background: #fff3cd;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    position: relative;
+    animation: float 2s infinite alternate;
+}
+
+/* Eyes */
+.eye {
+    width: 25px;
+    height: 25px;
+    background: #FFAD00;
+    border-radius: 50%;
+    position: absolute;
+    top: 35%;
+}
+.eye.left { left: 25%; }
+.eye.right { right: 25%; }
+
+/* Mouth */
+.mouth {
+    width: 70px;
+    height: 10px;
+    background: #FFAD00;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Floating animation */
 @keyframes float {
     0% { transform: translateY(0); }
     100% { transform: translateY(-15px); }
+}
+
+/* Typography */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.lead {
+    font-size: 1.5rem;
 }
 </style>
 {% endblock %}

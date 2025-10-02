@@ -13,7 +13,7 @@ from django.utils.translation import gettext_lazy as _
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-a4pl9x_640)f)p44&h%edo=+j!aqwslo1&1)y6s)x3c+q*l*$j'
-DEBUG = True
+DEBUG = False
 
 print(">>> STARTUP using settings file:", __file__, file=sys.stderr)
 

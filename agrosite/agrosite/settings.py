@@ -7,13 +7,15 @@ import os
 import sys
 from pathlib import Path
 from urllib.parse import urlparse
+
+from django.db.models.query import FlatValuesListIterable
 from django.utils.translation import gettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-a4pl9x_640)f)p44&h%edo=+j!aqwslo1&1)y6s)x3c+q*l*$j'
-DEBUG = True
+DEBUG = False
 
 print(">>> STARTUP using settings file:", __file__, file=sys.stderr)
 

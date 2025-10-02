@@ -7,76 +7,133 @@
 {% block content %}
 <div class="error-page">
 
+    <!-- Sun -->
+    <div class="sun"></div>
+
+    <!-- Clouds -->
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+
     <!-- CSS Illustration -->
     <div class="css-500-illustration">
         <div class="server">
-            <div class="light left"></div>
-            <div class="light right"></div>
-            <div class="slot"></div>
+            <div class="server-body"></div>
+            <div class="server-crack"></div>
+            <div class="spark spark1"></div>
+            <div class="spark spark2"></div>
         </div>
     </div>
 
-    <h1>500 - {% trans "Erreur du serveur" %}</h1>
-    <p class="lead">{% trans "Oups ! Quelque chose a mal tourné. Nous travaillons pour résoudre le problème." %}</p>
+    <h1>500 - {% trans "Erreur interne du serveur" %}</h1>
+    <p class="lead">{% trans "Oups… quelque chose s'est mal passé. Nous travaillons pour résoudre le problème." %}</p>
     <a href="{% url 'home' %}" class="btn btn-success btn-lg mt-4">{% trans "Retour à l'accueil" %}</a>
 </div>
 
 <style>
 /* Full-page gradient background */
 .error-page {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #FFAD00, #24943D);
+    background: linear-gradient(135deg, #24943D, #FFAD00);
     text-align: center;
     color: white;
-    padding: 20px;
+    overflow: hidden;
 }
 
-/* CSS Illustration */
-.server {
-    width: 180px;
-    height: 180px;
-    background: #fff3cd;
-    margin-bottom: 30px;
-    border-radius: 20px;
-    position: relative;
-    animation: shake 0.5s infinite;
-}
-
-/* Lights */
-.light {
-    width: 25px;
-    height: 25px;
-    background: red;
-    border-radius: 50%;
+/* Sun */
+.sun {
     position: absolute;
-    top: 20px;
-}
-.light.left { left: 20px; }
-.light.right { right: 20px; }
-
-/* Slot */
-.slot {
-    width: 70px;
-    height: 12px;
-    background: #FFAD00;
-    border-radius: 6px;
-    position: absolute;
-    bottom: 25px;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    background: #FFD93D;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #FFD93DAA;
 }
 
-/* Shaking animation */
-@keyframes shake {
+/* Clouds */
+.cloud {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: cloudMove 60s linear infinite;
+}
+
+.cloud1 { width: 200px; height: 60px; top: 15%; left: -250px; }
+.cloud2 { width: 150px; height: 45px; top: 25%; left: -200px; }
+.cloud3 { width: 180px; height: 50px; top: 35%; left: -220px; }
+
+@keyframes cloudMove {
     0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(5px); }
+    100% { transform: translateX(150vw); }
+}
+
+/* CSS Illustration - Server Crash */
+.server {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 30px;
+    animation: float 2s infinite alternate;
+}
+
+.server-body {
+    width: 100%;
+    height: 100%;
+    background: #fff3cd;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 20px #00000033;
+}
+
+.server-crack {
+    position: absolute;
+    width: 4px;
+    height: 60px;
+    background: #FF0000;
+    transform: rotate(25deg);
+    top: 20%;
+    left: 45%;
+    animation: crackShake 0.5s infinite alternate;
+}
+
+.spark {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: yellow;
+    border-radius: 50%;
+    top: 10%;
+    left: 50%;
+    opacity: 0.8;
+    animation: sparkFlicker 0.5s infinite alternate;
+}
+.spark2 { left: 60%; top: 30%; }
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+
+/* Crack shake */
+@keyframes crackShake {
+    0% { transform: rotate(25deg); }
+    100% { transform: rotate(35deg); }
+}
+
+/* Spark flicker */
+@keyframes sparkFlicker {
+    0% { opacity: 0.5; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.3); }
 }
 
 /* Typography */

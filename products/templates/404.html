@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 - Page non trouvée</title>
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gradient-to-r from-green-100 to-green-200 flex items-center justify-center min-h-screen font-sans">
-  <div class="text-center p-6">
-    <div class="relative">
-      <!-- Illustration -->
-      <svg class="w-64 h-64 mx-auto" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="256" cy="256" r="256" fill="#F87171"/>
-        <text x="50%" y="50%" text-anchor="middle" fill="white" font-size="120" dy=".35em">404</text>
-      </svg>
+{% extends 'products/base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}404 | AgroSite{% endblock %}
+
+{% block content %}
+<div class="hero-section" style="background: url('/static/images/1245.png') no-repeat center center/cover;">
+    <div class="hero-content text-center">
+        <h1 style="color: #FFAD00;">{% trans "404 - Page introuvable" %}</h1>
+        <p class="lead" style="color: white;">{% trans "Désolé, la page que vous cherchez n’existe pas." %}</p>
+        <a href="{% url 'home' %}" class="btn btn-success btn-lg mt-4">{% trans "Retour à l'accueil" %}</a>
     </div>
-    <h1 class="text-4xl font-bold mt-6 text-gray-800">Oops! Page introuvable</h1>
-    <p class="mt-2 text-gray-600">La page que vous cherchez n’existe pas ou a été déplacée.</p>
-    <a href="/" class="mt-6 inline-block px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition">
-      Retour à l'accueil
-    </a>
-    <p class="mt-6 text-sm text-gray-500">© 2025 Slim Agri. Tous droits réservés.</p>
-  </div>
-</body>
-</html>
+</div>
+{% endblock %}

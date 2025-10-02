@@ -15,6 +15,9 @@
     <div class="cloud cloud2"></div>
     <div class="cloud cloud3"></div>
 
+    <!-- Ground / Grass -->
+    <div class="ground"></div>
+
     <!-- CSS Illustration -->
     <div class="css-500-illustration">
         <div class="server">
@@ -39,7 +42,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #24943D, #FFAD00);
+    background: linear-gradient(to top, #24943D 0%, #87E8FF 70%, #FFD93D 100%);
     text-align: center;
     color: white;
     overflow: hidden;
@@ -66,7 +69,6 @@
     opacity: 0.8;
     animation: cloudMove 60s linear infinite;
 }
-
 .cloud1 { width: 200px; height: 60px; top: 15%; left: -250px; }
 .cloud2 { width: 150px; height: 45px; top: 25%; left: -200px; }
 .cloud3 { width: 180px; height: 50px; top: 35%; left: -220px; }
@@ -74,6 +76,17 @@
 @keyframes cloudMove {
     0% { transform: translateX(0); }
     100% { transform: translateX(150vw); }
+}
+
+/* Ground / Grass */
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(to top, #24943D 0%, #5BC85B 100%);
+    border-top-left-radius: 50% 20px;
+    border-top-right-radius: 50% 20px;
 }
 
 /* CSS Illustration - Server Crash */

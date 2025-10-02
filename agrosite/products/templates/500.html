@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Server error</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erreur du serveur - Slim Agri</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>Oops! Something went wrong (500)</h1>
-    <p>We are working to fix it.</p>
-    <a href="/">Go to home</a>
+<body class="bg-green-50 flex items-center justify-center min-h-screen font-sans">
+    <div class="text-center px-6">
+        <h1 class="text-9xl font-extrabold text-red-600">500</h1>
+        <h2 class="text-3xl md:text-4xl font-bold mt-4 text-red-700">Oups ! Erreur du serveur</h2>
+        <p class="mt-2 text-red-600">Quelque chose a mal tourné. Nous travaillons pour résoudre le problème.</p>
+        <a href="/" class="inline-block mt-6 px-6 py-3 bg-red-600 text-white font-semibold rounded-lg shadow hover:bg-red-700 transition">
+            Retour à l'accueil
+        </a>
+        <p class="mt-4 text-sm text-red-500">© 2025 Slim Agri. Tous droits réservés.</p>
+    </div>
 </body>
 </html>
